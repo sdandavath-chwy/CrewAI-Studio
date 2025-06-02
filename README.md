@@ -15,16 +15,6 @@ Welcome to CrewAI Studio! This application provides a user-friendly interface wr
 - **Single Page app export**: Feature to export crew as simple single page streamlit app.
 - **Threaded crew run**: Crews can run in background and can be stopped.
 
-## Support CrewAI Studio
-
-Your support helps fund the development and growth of our project. Every contribution is greatly appreciated!
-
-### Donate with Bitcoin
-[![Donate with Bitcoin](https://www.blockonomics.co/img/pay_with_bitcoin_medium.png)](https://pay-link.s3.us-west-2.amazonaws.com/index.html?uid=b14b42846ecd40fe)
-
-### Sponsor via GitHub
-[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=github)](https://github.com/sponsors/strnad)
-
 
 ## Screenshots
 
