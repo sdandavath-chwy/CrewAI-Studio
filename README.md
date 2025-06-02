@@ -149,11 +149,20 @@ docker-compose up --build
 Before running the application, ensure you update the `.env` file with your API keys and other necessary configurations. An example `.env` file is provided for reference.
 
 ## Troubleshooting
-In case of problems:
+1. In case of problems:
 - Delete the `venv/miniconda` folder and reinstall `crewai-studio`.
 - Rename `crewai.db` (it contains your crews but sometimes new versions can break compatibility).
 - Raise an issue and I will help you.
 
+2. Remove Stale or Broken Containers
+```
+docker-compose down -v --remove-orphans
+docker system prune -a --volumes -f
+```
+Then retry:
+```
+docker-compose up --build
+```
 ## Video tutorial
 Video tutorial on CrewAI Studio made by Josh Poco
 
