@@ -13,6 +13,10 @@ from tools.S3FileQueryTool import S3FileQueryTool
 
 from tools.DuckDuckGoSearchTool import DuckDuckGoSearchTool
 
+# Additional custom tools
+from tools.AnalyticsTool import AnalyticsTool
+from tools.LLMReasoningTool import LLMReasoningTool
+
 from langchain_community.tools import YahooFinanceNewsTool
 
 class MyTool:
@@ -45,6 +49,28 @@ class MyTool:
                     st.warning(f"Parameter '{param_name}' is mandatory for tool '{self.name}'")
                 return False
         return True
+
+# AnalyticsTool integration
+class MyAnalyticsTool(MyTool):
+    def __init__(self, tool_id=None, content=None):
+        parameters = {
+            'content': {'mandatory': False}
+        }
+        super().__init__(tool_id, 'AnalyticsTool', "Performs basic analytics on revenue data.", parameters, content=content)
+
+    def create_tool(self) -> AnalyticsTool:
+        return AnalyticsTool()
+
+# LLMReasoningTool integration
+class MyLLMReasoningTool(MyTool):
+    def __init__(self, tool_id=None, input_text=None):
+        parameters = {
+            'input_text': {'mandatory': False}
+        }
+        super().__init__(tool_id, 'LLMReasoningTool', "Generates beliefs or inferences from provided observations or beliefs.", parameters, input_text=input_text)
+
+    def create_tool(self) -> LLMReasoningTool:
+        return LLMReasoningTool()
 
 class MyScrapeWebsiteTool(MyTool):
     def __init__(self, tool_id=None, website_url=None):
@@ -457,5 +483,7 @@ TOOL_CLASSES = {
     'PDFSearchTool': MyPDFSearchTool,
     'PGSearchTool': MyPGSearchTool,
     'SnowflakeQueryTool': MySnowflakeQueryTool,
-    'S3FileQueryTool': MyS3FileQueryTool
+    'S3FileQueryTool': MyS3FileQueryTool,
+    'AnalyticsTool': MyAnalyticsTool,
+    'LLMReasoningTool': MyLLMReasoningTool
 }
