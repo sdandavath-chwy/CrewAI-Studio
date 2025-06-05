@@ -33,7 +33,7 @@ Welcome to CrewAI Studio! This application provides a user-friendly interface wr
 1. **Clone the repository (or use downloaded ZIP file)**:
 
    ```bash
-   git clone https://github.com/strnad/CrewAI-Studio.git
+   git clone git@github.com:sdandavath-chwy/CrewAI-Studio.git
    cd CrewAI-Studio
    ```
 
@@ -53,7 +53,7 @@ Welcome to CrewAI Studio! This application provides a user-friendly interface wr
 1. **Clone the repository (or use downloaded ZIP file)**:
 
    ```powershell
-   git clone https://github.com/strnad/CrewAI-Studio.git
+   git clone git@github.com:sdandavath-chwy/CrewAI-Studio.git
    cd CrewAI-Studio
    ```
 
@@ -77,7 +77,7 @@ Conda will be installed locally in the project folder. No need for a pre-existin
 1. **Clone the repository (or use downloaded ZIP file)**:
 
    ```bash
-   git clone https://github.com/strnad/CrewAI-Studio.git
+   git clone git@github.com:sdandavath-chwy/CrewAI-Studio.git
    cd CrewAI-Studio
    ```
 
@@ -97,7 +97,7 @@ Conda will be installed locally in the project folder. No need for a pre-existin
 1. **Clone the repository (or use downloaded ZIP file)**:
 
    ```powershell
-   git clone https://github.com/strnad/CrewAI-Studio.git
+   git clone git@github.com:sdandavath-chwy/CrewAI-Studio.git
    cd CrewAI-Studio
    ```
 
@@ -128,7 +128,7 @@ To quickly set up and run CrewAI-Studio using Docker Compose, follow these steps
 
 1. Clone the repository:
 ```
-git clone https://github.com/strnad/CrewAI-Studio.git
+git clone git@github.com:sdandavath-chwy/CrewAI-Studio.git
 cd CrewAI-Studio
 ```
 
@@ -163,17 +163,3 @@ Then retry:
 ```
 docker-compose up --build
 ```
-## Video tutorial
-Video tutorial on CrewAI Studio made by Josh Poco
-
-[![FREE CrewAI Studio GUI EASY AI Agent Creation!🤖 Open Source AI Agent Orchestration Self Hosted](https://img.youtube.com/vi/3Uxdggt88pY/hqdefault.jpg)](https://www.youtube.com/watch?v=3Uxdggt88pY)
-
-## Star History
-
-<a href="https://star-history.com/#strnad/CrewAI-Studio&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=strnad/CrewAI-Studio&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=strnad/CrewAI-Studio&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=strnad/CrewAI-Studio&type=Date" />
- </picture>   
-</a>
