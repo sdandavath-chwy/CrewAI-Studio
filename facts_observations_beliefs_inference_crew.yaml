@@ -1,0 +1,52 @@
+crew:
+  name: "Revenue Intelligence Crew"
+  description: "Multi-agent chain to analyze revenue data from S3"
+
+  agents:
+    - id: fact_agent
+      name: Fact Agent
+      role: Extract raw facts from S3 data
+      goal: Use S3FileQueryTool to read and extract revenue records.
+      tools: [s3_query_tool]
+
+    - id: observations_agent
+      name: Observations Agent
+      role: Detect revenue patterns and significant events
+      goal: Analyze facts to find highs, lows, and thresholds
+      tools: [analytics_tool]
+
+    - id: beliefs_agent
+      name: Beliefs Agent
+      role: Generate beliefs from observed patterns
+      goal: Reason about seasonality or anomalies in revenue behavior
+      tools: [llm_reasoning_tool]
+
+    - id: inference_agent
+      name: Inference Agent
+      role: Produce final strategic insights or alerts
+      goal: Summarize beliefs into conclusions or forecasts
+      tools: [llm_reasoning_tool]
+
+  tasks:
+    - id: parse_facts
+      agent_id: fact_agent
+      description: "Use S3FileQueryTool to extract facts from S3-based CSV"
+      expected_output: "List of structured facts with revenue and dates"
+
+    - id: derive_observations
+      agent_id: observations_agent
+      description: "Analyze facts and produce key observations"
+      expected_output: "Observations like min/max revenue, threshold crossings"
+      depends_on: [parse_facts]
+
+    - id: form_beliefs
+      agent_id: beliefs_agent
+      description: "Form beliefs based on observations"
+      expected_output: "Belief statements such as 'revenue growth is accelerating'"
+      depends_on: [derive_observations]
+
+    - id: final_inference
+      agent_id: inference_agent
+      description: "Conclude with insights, forecasts, or alerts"
+      expected_output: "Summary insight or recommendation"
+      depends_on: [form_beliefs]
