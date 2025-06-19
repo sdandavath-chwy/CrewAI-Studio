@@ -21,7 +21,7 @@ class AnalyticsTool(BaseTool):
             result = {
                 "min_revenue": df["NET_REVENUE"].min(),
                 "max_revenue": df["NET_REVENUE"].max(),
-                "first_above_10m": df[df["NET_REVENUE"] > 10].iloc[0]["WEEK"]
+                "first_above_10m": df[df["NET_REVENUE"] > 10].iloc[0]["ORDER_WEEK"]
                     if not df[df["NET_REVENUE"] > 10].empty else None
             }
             return json.dumps(result, indent=2)
